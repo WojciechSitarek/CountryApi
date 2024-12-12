@@ -53,7 +53,7 @@ To run the project locally, make sure that your environment is set up correctly.
 
 5. **Add Lombok Plugin to Build Configuration**  
    To ensure proper annotation processing, add the following configuration to the `<build>` section of your `pom.xml` file for Maven(or newer version):
-
+ ```xml
 <build>
 		<plugins>
 			<plugin>
@@ -82,7 +82,7 @@ To run the project locally, make sure that your environment is set up correctly.
 			</plugin>
 		</plugins>
 	</build>
-
+```
 
 ## Features
 
