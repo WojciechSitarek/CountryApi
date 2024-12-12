@@ -26,6 +26,64 @@ To run the project locally, make sure that your environment is set up correctly.
    After enabling annotation processing, rebuild your project to ensure Lombok annotations are processed correctly. You can rebuild the project using:
    - `Build` → `Rebuild Project`.
 
+4. **Add Lombok Dependency**  
+   Make sure you add Lombok as a dependency in your project. Add the following to your `pom.xml` (Maven) or `build.gradle` (Gradle):
+
+   - **For Maven (`pom.xml`)**:
+     ```xml
+     <dependencies>
+         <dependency>
+             <groupId>org.projectlombok</groupId>
+             <artifactId>lombok</artifactId>
+             <version>1.18.24</version> <!-- or the latest version -->
+             <scope>provided</scope>
+         </dependency>
+     </dependencies>
+     ```
+
+   - **For Gradle (`build.gradle`)**:
+     ```gradle
+     dependencies {
+         compileOnly 'org.projectlombok:lombok:1.18.24'  // or the latest version
+         annotationProcessor 'org.projectlombok:lombok:1.18.24'  // or the latest version
+     }
+     ```
+
+   Make sure to sync your dependencies with your build tool (`mvn clean install` for Maven or `gradle build` for Gradle).
+
+5. **Add Lombok Plugin to Build Configuration**  
+   To ensure proper annotation processing, add the following configuration to the `<build>` section of your `pom.xml` file for Maven(or newer version):
+
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
 ## Features
 
 - Retrieve country data based on its ISO code.
