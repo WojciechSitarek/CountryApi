@@ -6,6 +6,31 @@ Country API is a simple RESTful service that allows fetching information about c
 
 The API saves the retrieved data in a local H2 database, and then provides it to users, ensuring faster access to information if the data has been previously fetched and stored.
 
+## Technologies Used
+
+This project utilizes the following technologies:
+
+1. **Java 21**  
+   The application is built using Java 21, which is the primary programming language for backend development. Java 21 provides advanced language features and improved performance, making it ideal for modern application development.
+
+2. **Spring Boot**  
+   Spring Boot is used to simplify the setup and configuration of the application. It allows rapid development of production-grade applications with minimal configuration.
+
+3. **Lombok**  
+   Lombok is used to reduce boilerplate code in Java, such as getters, setters, constructors, and more. It uses annotations to generate these elements during compile-time, making the code more concise and readable.
+
+4. **Maven**  
+   Maven is the build automation tool used in this project to manage dependencies, build the project, and run the application. It simplifies the process of dependency management and project configuration.
+
+5. **H2 Database**  
+   H2 is an in-memory database used to store country data. It provides fast and lightweight storage for the project, enabling quick storage and retrieval of country information fetched from external APIs.
+
+6. **Spring Data JPA**  
+   Spring Data JPA is used for data persistence. It provides a simple way to interact with databases using Java Persistence API (JPA), eliminating the need for boilerplate code to access and manage relational databases.
+
+7. **Spring Web**  
+   Spring Web is used to build RESTful web services. It enables the creation of the API endpoints that handle HTTP requests and responses, providing the necessary infrastructure for building scalable web applications.
+
 ## Setting up the Project
 
 To run the project locally, make sure that your environment is set up correctly. Follow the steps below:
