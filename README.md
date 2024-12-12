@@ -1,36 +1,35 @@
 # Country API
 
-## Opis
+## Description
 
-Country API to prosty serwis RESTful, który umożliwia pobieranie informacji o krajach na podstawie ich kodu (ISO 3166-1 alpha-3). API integruje się z zewnętrznym serwisem **RestCountries**, który dostarcza szczegółowe dane o krajach, takie jak nazwa, stolica, języki, waluty, strefy czasowe, populacja, granice, region, subregion oraz inne.
+Country API is a simple RESTful service that allows fetching information about countries based on their ISO 3166-1 alpha-3 code. The API integrates with the external **RestCountries** service, which provides detailed data about countries, such as name, capital, languages, currencies, timezones, population, borders, region, subregion, and more.
 
-API zapisuje pobrane dane w lokalnej bazie danych H2, a następnie udostępnia je użytkownikom, zapewniając szybszy dostęp do informacji, jeżeli dane zostały wcześniej pobrane i zapisane.
+The API saves the retrieved data in a local H2 database, and then provides it to users, ensuring faster access to information if the data has been previously fetched and stored.
 
-## Funkcjonalności
+## Features
 
-- Pobieranie danych o kraju na podstawie jego kodu ISO.
-- Zapis danych do lokalnej bazy danych H2.
-- Obsługa błędów i wyjątków.
-- Możliwość skalowania i dodawania nowych funkcji w przyszłości.
+- Retrieve country data based on its ISO code.
+- Store data in a local H2 database.
+- Ability to scale and add new features in the future.
 
 ## Endpoints
 
 ### GET `/country/{code}`
 
-Pobiera informacje o kraju na podstawie jego kodu (ISO 3166-1 alpha-3).
+Fetches information about a country based on its ISO 3166-1 alpha-3 code.
 
-#### Przykład:
+#### Example:
 
 - **URL:** `/country/PL`
-- **Metoda:** GET
-- **Odpowiedź:**
+- **Method:** GET
+- **Response:**
 
 ```json
 {
-  "commonName": "Polska",
-  "officialName": "Rzeczpospolita Polska",
+  "commonName": "Poland",
+  "officialName": "Republic of Poland",
   "currencies": ["PLN"],
-  "capital": ["Warszawa"],
+  "capital": ["Warsaw"],
   "region": "Europe",
   "subregion": "Eastern Europe",
   "languages": ["pl"],
