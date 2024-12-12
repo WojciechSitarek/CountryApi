@@ -6,6 +6,26 @@ Country API is a simple RESTful service that allows fetching information about c
 
 The API saves the retrieved data in a local H2 database, and then provides it to users, ensuring faster access to information if the data has been previously fetched and stored.
 
+## Setting up the Project
+
+To run the project locally, make sure that your environment is set up correctly. Follow the steps below:
+
+### IntelliJ IDEA Configuration
+
+1. **Install Lombok Plugin**  
+   Ensure that the Lombok plugin is installed in your IDE. You can install it by going to:
+   - `File` → `Settings` → `Plugins`
+   - Search for "Lombok" and click "Install".
+
+2. **Enable Annotation Processing**  
+   Lombok requires annotation processing to generate code during compile time. To enable annotation processing in IntelliJ IDEA:
+   - Navigate to: `Preferences` → `Build, Execution, Deployment` → `Compiler` → `Annotation Processors`.
+   - Make sure the option **Enable annotation processing** is checked.
+
+3. **Rebuild the Project**  
+   After enabling annotation processing, rebuild your project to ensure Lombok annotations are processed correctly. You can rebuild the project using:
+   - `Build` → `Rebuild Project`.
+
 ## Features
 
 - Retrieve country data based on its ISO code.
