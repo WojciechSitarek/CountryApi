@@ -6,7 +6,7 @@ Country API is a simple RESTful service that allows fetching information about c
 
 The API saves the retrieved data in a local H2 database, and then provides it to users, ensuring faster access to information if the data has been previously fetched and stored.
 
-## Technologies Used
+## Technologies
 
 This project utilizes the following technologies:
 
